@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="static/styles.css"> 
+</head>
+<body>
+    <h1>Add Student</h1>
+    <form method="POST" action="/add_student">
+        <div class="form-group">
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" name="name" required class="form-control" value="{{ name }}">
+        </div>
+        <div class="form-group">
+            <label for="studentAge">Age:</label>
+            <input type="number" id="studentAge" name="age" required class="form-control" value="{{ age }}">
+        </div>
+        <div class="form-group">
+            <label for="studentEmail">Email:</label>
+            <input type="email" id="studentEmail" name="email" required class="form-control" value="{{ email }}"> 
+        </div>
+        <a href="#" onclick="this.parentNode.submit();" class="btn btn-primary">Add Student</a> 
+        <a href="/" class="btn btn-secondary">Student List</a> 
+    </form>
+</body>
+</html>

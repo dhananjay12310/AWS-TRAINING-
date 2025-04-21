@@ -1,0 +1,5 @@
+Flask==2.3.2
+PyMySQL==1.0.2
+python-dotenv
+gunicorn
+boto3
