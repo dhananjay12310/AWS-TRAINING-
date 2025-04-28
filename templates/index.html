@@ -5,7 +5,34 @@
     <link rel="stylesheet" href="static/styles.css"> 
 </head>
 <body>
-    <p style="text-align: center;">Testing ci/cd</p>
-    
+    <p style="text-align: center;">This image from S3 storage</p>
+    <!-- <img src="{{ image_url }}" alt="Blob Image" style="width: 100%; height: auto;"> -->
+    {% if image_url %}
+        <img src="{{ image_url }}" alt="Blob Image" style="width: 100%; height: auto; max-height: 100px;">
+    {% else %}
+        <p>No image available</p>
+    {% endif %}
+    <h1>Student List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th> 
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in students %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/add_student" class="btn btn-primary">Add Student</a> 
 </body>
 </html>
