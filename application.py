@@ -11,7 +11,7 @@ app.secret_key = os.urandom(24)
 
 @app.route('/')
 def index():
-    return "This is my webapp"
+    return "This is my webapp with CICD pipeline"
 
 
 
