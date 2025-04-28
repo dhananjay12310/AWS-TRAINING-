@@ -11,7 +11,7 @@ app.secret_key = os.urandom(24)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "This is my webapp"
 
 
 
